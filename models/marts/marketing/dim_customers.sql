@@ -6,6 +6,10 @@ orders as (
     select * from {{ ref('stg_jaffle_shop__orders') }}
 ),
 
+lifetime_value as (
+    select * from {{ ref('stg_jaffle_shop__orders') }}
+),
+
 customer_orders as (
 
     select
