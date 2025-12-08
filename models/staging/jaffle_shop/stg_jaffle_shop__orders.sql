@@ -7,16 +7,11 @@ source as (
 ),
 
 renamed as (
-
     select
-        id,
-        user_id,
+        id as order_id,
+        user_id as customer_id,
         order_date,
-        status,
-        _etl_loaded_at
-
-    from source
-
+        status as order_status
 )
 
 select * from renamed
